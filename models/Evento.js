@@ -1,8 +1,9 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const EventoSchema = new mongoose.Schema({
+const EventSchema = new mongoose.Schema({
   boton: String,
-  hora: { type: Date, default: Date.now }
+  hora: Date
 });
 
-module.exports = mongoose.model('Evento', EventoSchema);
+export default mongoose.model('Event', EventSchema);
+
